@@ -42,6 +42,27 @@ services:
       - redis
     restart: unless-stopped
 
+
+  api_symfony:
+    build:
+      context: .
+      dockerfile: docker/api-symfony.Dockerfile
+    container_name: elearn-api-symfony
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./apps/api-symfony:/app/apps/api-symfony
+    env_file:
+      - .env
+    environment:
+      DATABASE_URL: postgresql://elearn:elearn@db:5432/elearn
+      REDIS_URL: redis://redis:6379
+      APP_ENV: dev
+    depends_on:
+      - db
+      - redis
+    restart: unless-stopped
+
   web:
     build:
       context: .
