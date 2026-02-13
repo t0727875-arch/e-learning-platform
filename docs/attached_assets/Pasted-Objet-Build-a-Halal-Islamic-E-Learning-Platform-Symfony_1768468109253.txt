@@ -1,0 +1,113 @@
+Objet : Build a Halal Islamic E-Learning Platform (Symfony Preferred)
+ 
+You are an expert full-stack engineer and system architect.
+Build a HALAL Islamic e-learning platform with the following strict requirements.
+1. Tech Stack
+Backend: Symfony (latest stable).
+If Symfony is not supported, fallback to Node.js (Express).
+Frontend: Simple HTML, CSS, and Vanilla JavaScript (no React).
+Database: MySQL.
+Auth: Email/password + Google + Facebook OAuth.
+2. Public Pages (No Login Required)
+Home
+About the website
+Support page
+Donation (Sadaqah / Waqf-style)
+Paths list (read-only)
+Courses list with descriptions (read-only)
+3. User Roles
+Administrator
+Full access
+Define hierarchy depth (children nodes levels)
+Manage difficulty levels for quizzes
+Manage certificates
+Manage users and roles
+Teacher
+Create paths, courses, lessons
+Add video lessons and written articles
+Create quiz questions
+Assign question difficulty levels
+Student
+Enroll in paths/courses
+View lessons
+Take quizzes
+Earn certificates
+Participate in leaderboards
+4. Learning Structure (Recursive & Dynamic)
+Path
+
+└── Course
+
+└── Lesson
+
+└── Chapter
+
+└── Sub-chapter
+
+└── Children nodes (admin-defined depth)
+Each level can have:
+Content (video/article)
+A final quiz (assessment)
+Chapter Summary (Required)
+Each chapter must end with a mandatory summary
+The summary is written by the teacher
+It highlights key concepts, ayat/hadith references (if any), and learning objectives
+Students must view the summary before accessing the chapter quiz
+The summary is stored separately and is editable only by the teacher or administrator
+Chapter Summary (Required)
+Each chapter must end with a mandatory summary
+The summary is written by the teacher
+It highlights key concepts, ayat/hadith references (if any), and learning objectives
+Students must view the summary before accessing the chapter quiz
+The summary is stored separately and is editable only by the teacher or administrator
+5. Quiz System (Advanced)
+Question pools organized by difficulty levels
+Difficulty levels count is configurable by admin (e.g. 5 levels)
+Each level contains a fixed number of questions (e.g. 20)
+Questions are randomly selected from large pools
+Questions are never repeated in the same attempt
+Unlimited retries
+Seed-based secure randomization
+Optional anti-cheating timer
+Students must pass levels sequentially
+Passing score is configurable by administrator.
+6. Certificates
+Course certificate after completing all lessons + final quiz
+Path certificate after completing all courses + quizzes
+PDF certificates including:
+Student name
+Course / Path name
+Date
+Unique ID
+QR code
+Public certificate verification page (by ID)
+7. Gamification
+Leaderboards:
+By country
+Weekly random teams
+Friends teams
+Points earned from quizzes only (no gambling, no money rewards)
+Separate Random Quiz Interface:
+Shows quizzes based on completed courses
+Used to improve leaderboard score
+8. Monetization
+Donations only
+No subscriptions
+No paid access
+No gambling, no ads, no riba
+9. Security & Best Practices
+Role-based access control
+Secure password hashing
+CSRF protection
+Clean architecture
+Scalable database schema
+Clear comments and documentation
+10. Deliverables
+Database schema
+API endpoints
+Backend logic
+Frontend pages
+Sample data
+Clear instructions to run the project
+Build the project step by step and ensure it is production-ready.
+ 
